@@ -3,7 +3,7 @@ service: typescript-wabpack-template
 provider:
   name: google
   stage: ${opt:stage, self:custom.defaultStage}
-  runtime: nodejs10
+  runtime: nodejs14
   region: asia-northeast1
   project: ${self:custom.secret.PROJECT_NAME}
   # The GCF credentials can be a little tricky to set up. Luckily we've documented this for you here:
@@ -32,7 +32,7 @@ package:
     - package.json
     - package-lock.json
   exclude:
-    - "./**"
+    - './**'
 
 functions:
   first:

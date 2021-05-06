@@ -38,8 +38,14 @@ npm run watch
 npx serverless deploy -s {env}
 ```
 
+### remove resource
+
+```shell
+npx serverless remove -s {env}
+```
+
 ### test request
 
 ```shell
-npx serverless invoke -f first
+npx serverless invoke --function first
 ```

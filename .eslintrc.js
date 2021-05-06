@@ -4,7 +4,11 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
+    'plugin:react/recommended',
     'plugin:@typescript-eslint/eslint-recommended',
+    'prettier',
+    'prettier/@typescript-eslint',
+    'prettier/react',
   ],
   globals: {
     Atomics: 'readonly',
@@ -16,18 +20,4 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['@typescript-eslint'],
-  rules: {
-    // prettier
-    'prettier/prettier': [
-      'error',
-      {
-        bracketSpacing: true,
-        printWidth: 80,
-        semi: true,
-        singleQuote: true,
-        trailingComma: 'all',
-        useTabs: false,
-      },
-    ],
-  },
 };
